@@ -1,159 +1,84 @@
-# ⚡Git Conflicts Resolution Workshop⚡
+# ⚡ Git Conflicts Resolution Workshop
 
-* Use the example repository in the `git-workshop` folder to practice resolving conflicts
-* There will be breaks for you to work on each Mini-Lab
-* Each lab contains hands-on exercises to reinforce learning
+Welcome to the Git Conflicts Resolution Workshop! This workshop will guide you through resolving Git conflicts using tools like `rebase`, `merge`, and `cherry-pick`. Each lab builds on key concepts to help you become more confident working with Git in collaborative environments.
 
-## 📋 Pre-Lab Requirements
+---
 
-**1. Git Setup**
-* Install Git on your machine if you haven't already
-* Configure your Git credentials:
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
+## 📋 Pre-requisite Lab (Before Workshop)
 
-**2. Repository Setup**
-* Fork the repository by clicking the 'Fork' button at the top right of this page
-* Clone your forked repository:
-```bash
-git clone https://github.com/YOUR-USERNAME/git-workshop.git
-cd git-workshop
-```
-* Add the original repository as upstream:
-```bash
-git remote add upstream https://github.com/ORIGINAL-OWNER/git-workshop.git
-```
+This pre-requisite lab includes setting up your GitHub repository and practicing key Git commands that will be used throughout the workshop.
 
-**3. Verify Setup**
-* Check your Git configuration:
-```bash
-git config --list
-```
-* Verify remotes are set correctly:
-```bash
-git remote -v
-```
+### 🛠 DETAILS:
+- Git configuration
+- Git history (`git log`, `git diff`)
+- Undoing changes with `revert` and `reset`
+- Making commits
+- Pushing and pulling changes
+- Creating pull requests
+- Using `cherry-pick`
 
-><details>
-><summary>🔧 Troubleshooting Setup</summary>
->
->If you encounter issues:
->```bash
-># Check Git installation
->git --version
->
-># Check repository status
->git status
->
-># View all branches
->git branch -a
->```
-></details>
+---
 
-## 🛠️ Mini Lab 1: Git Rebase Fundamentals
+## 🔁 Mini Lab 1 – Rebase
 
-**Exercise 1.1**: Understanding Basic Rebase
-* Description of what you'll learn
-* Key concepts covered
-* Expected outcome
+### 1.1 – Introduction to Basic Rebase
 
-><details>
-><summary>🎥 Basic Rebase Demo Video</summary>
->
->https://your-video-link-here
->
-></details>
+Rebase a simple feature branch onto `main`. Learn how to bring your branch up to date without creating a merge commit, maintaining a linear history.
 
-**Exercise 1.2**: Interactive Rebase
-* Description of what you'll learn
-* Key concepts covered
-* Expected outcome
+📹 _Video Demo Placeholder:_  
+`[Insert Basic Rebase Demo Video Link Here]`
 
-><details>
-><summary>🎥 Interactive Rebase Demo Video</summary>
->
->https://your-video-link-here
->
-></details>
+---
 
-**Exercise 1.3**: Resolving Rebase Conflicts
-* Description of what you'll learn
-* Key concepts covered
-* Expected outcome
+### 1.2 – Rebase Onto Updated Main with Multiple Conflicts
 
-><details>
-><summary>✨ Helpful Rebase Commands</summary>
->
->```bash
-># View current branch structure
->git log --graph --oneline --all
->
-># Start interactive rebase
->git rebase -i HEAD~3
->```
-></details>
+Use `git rebase` to apply changes from a feature branch onto an updated `main` branch. Learn how to handle and resolve multiple merge conflicts during the rebase process.
 
-## 🧠 Mini Lab 2: Merge Conflict Resolution
+📹 _Video Demo Placeholder:_  
+`[Insert Rebase with Conflicts Demo Video Link Here]`
 
-**Exercise 2.1**: Basic Merge Conflicts
-* Description of what you'll learn
-* Key concepts covered
-* Expected outcome
+---
 
-><details>
-><summary>🎥 Basic Merge Demo Video</summary>
->
->https://your-video-link-here
->
-></details>
+### 1.3 – Interactive Rebase with Conflict Resolution
 
-**Exercise 2.2**: Multiple File Conflicts
-* Description of what you'll learn
-* Key concepts covered
-* Expected outcome
+Use interactive rebase to squash, reorder, and edit commit messages. You'll encounter and resolve a conflict during the squash process, giving you practice in cleaning up commit history while handling conflicts.
 
-><details>
-><summary>✨ Helpful Merge Commands</summary>
->
->```bash
-># Check merge status
->git status
->
-># View conflict differences
->git diff
->```
-></details>
+📹 _Video Demo Placeholder:_  
+`[Insert Interactive Rebase Demo Video Link Here]`
 
-## 🤔 Mini Lab 3: Advanced Git Operations (Bonus)
+---
 
-**Exercise 3.1**: Cherry-Pick Operations
-* Description of what you'll learn
-* Key concepts covered
-* Expected outcome
+## 🔀 Mini Lab 2 – Merge
 
-**Exercise 3.2**: Reset and Recovery
-* Description of what you'll learn
-* Key concepts covered
-* Expected outcome
+### 2.1 – Introduction to Git Merge
 
-><details>
-><summary>✨ Advanced Git Commands</summary>
->
->```bash
-># Cherry pick a commit
->git cherry-pick <commit-hash>
->
-># Reset to previous state
->git reset --hard HEAD~1
->```
-></details>
+Learn how merging works in Git using simple branches that haven’t diverged significantly. You'll create a new branch, make a few changes, and then merge it back into `main`, exploring fast-forward and non-fast-forward merges.
 
-## 📚 Resources
-* [Git Documentation](https://git-scm.com/doc)
-* [Pro Git Book](https://git-scm.com/book/en/v2)
-* [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+📹 _Video Demo Placeholder:_  
+`[Insert Git Merge Basics Demo Video Link Here]`
 
-⚙️ Basic Git knowledge is required for this workshop\
-⚠️ Git commands can be destructive, so make sure to back up your work before starting
+---
+
+### 2.2 – Merge Conflict During Feature Integration
+
+Simulate a merge conflict by modifying the same lines on `main` and a feature branch. You'll identify the conflict, resolve it manually, and complete the merge. This lab also covers how to stage resolved files and abort the merge if needed.
+
+📹 _Video Demo Placeholder:_  
+`[Insert Merge Conflict Demo Video Link Here]`
+
+---
+
+### 2.3 – Selective Merging with Git Cherry Pick
+
+Learn how to apply specific commits from one branch to another using `git cherry-pick`. This technique is useful when a full merge is not desired but certain changes need to be brought over. You’ll practice picking individual commits and compare this approach with merging.
+
+📹 _Video Demo Placeholder:_  
+`[Insert Cherry-Pick Demo Video Link Here]`
+
+---
+
+## 🧠 Tip
+
+Each lab will include hands-on exercises. Use the Git CLI and your preferred editor (e.g., VS Code) to follow along. Make sure to read the instructions in each lab folder.
+
+Happy rebasing and merging! 🎉
